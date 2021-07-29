@@ -35,10 +35,9 @@ jobs:
         uses: docker/login-action@v1 
         with:
           username: ${{ secrets.twaves2611}}
-          password: ${{ secrets.docker@1212}}
+          password: ${{ secrets.47f20ca7-2152-4211-b573-0cf129175440}}
       -
-        # name: Build and push
-        # uses: docker/build-push-action@v2
+        
         name: Build and push Docker images
         uses: docker/build-push-action@v2.6.1
 
