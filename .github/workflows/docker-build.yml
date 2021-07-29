@@ -8,9 +8,9 @@ name: Docker Build and Push
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -37,8 +37,11 @@ jobs:
           username: ${{ secrets.twaves2611}}
           password: ${{ secrets.f8daa877-12e3-4f9f-ab70-e268cb72872b }}
       -
-        name: Build and push
-        uses: docker/build-push-action@v2
+        # name: Build and push
+        # uses: docker/build-push-action@v2
+        name: Build and push Docker images
+        uses: docker/build-push-action@v2.6.1
+
         with:
           context: .
           file: ./Dockerfile
