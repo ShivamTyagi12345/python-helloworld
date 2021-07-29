@@ -34,8 +34,8 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1 
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.twaves2611}}
+          password: ${{ secrets.f8daa877-12e3-4f9f-ab70-e268cb72872b }}
       -
         name: Build and push
         uses: docker/build-push-action@v2
@@ -44,4 +44,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: pixelpotato/python-helloworld:latest
+          tags: twaves2611/python-helloworld:latest
